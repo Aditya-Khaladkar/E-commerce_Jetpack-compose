@@ -17,6 +17,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
@@ -49,7 +50,9 @@ fun Login() {
 
 
     Column(
-        modifier = Modifier.fillMaxSize().background(color = Color.White),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color.White),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -108,9 +111,10 @@ fun Login() {
                     Text(text = "Forgot Password ?", modifier = Modifier.align(Alignment.End))
 
                     Spacer(modifier = Modifier.height(30.dp))
-                    Button(colors = ButtonDefaults.buttonColors(
-                        containerColor = newAppThemeColor
-                    ),
+                    Button(
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = newAppThemeColor
+                        ),
                         onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(text = "L o g i n")
@@ -120,6 +124,12 @@ fun Login() {
 
         }
 
+        Divider(
+            color = Color.LightGray, thickness = 1.dp,
+            modifier = Modifier.padding(50.dp)
+        )
+
+        Text(text = "Dont have an account ? Click here to Register !")
     }
 }
 
