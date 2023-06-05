@@ -4,9 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.example.e_commerce.view.Login
-import com.example.e_commerce.view.Register
+import com.example.e_commerce.auth.Login
+import com.example.e_commerce.auth.Register
 import com.example.e_commerce.view.SplashScreenComponent
 
 @Composable

@@ -1,4 +1,4 @@
-package com.example.e_commerce.view
+package com.example.e_commerce.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
