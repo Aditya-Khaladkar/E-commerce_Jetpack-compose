@@ -3,7 +3,6 @@ package com.example.e_commerce.view
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -11,19 +10,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -35,20 +28,16 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.example.e_commerce.R
-import com.example.e_commerce.navigation.Screen
 import com.example.e_commerce.ui.theme.newAppThemeColor
 
 @Composable
-fun Login(navController: NavController) {
-
+fun Register() {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    var username by remember { mutableStateOf("") }
 
 
     Column(
@@ -64,7 +53,7 @@ fun Login(navController: NavController) {
                 .padding(20.dp)
         ) {
             Text(
-                text = "Already \nhave an \nAccount?",
+                text = "Here's \nyour first \nstep with \nus",
                 fontSize = 20.sp, fontWeight = FontWeight.Bold
             )
 
@@ -94,6 +83,15 @@ fun Login(navController: NavController) {
                 ) {
                     OutlinedTextField(
                         modifier = Modifier.fillMaxWidth(),
+                        value = username,
+                        onValueChange = { username = it },
+                        label = { Text(text = "Enter Username") },
+                        placeholder = { Text(text = "Adi") }
+                    )
+
+                    Spacer(modifier = Modifier.height(30.dp))
+                    OutlinedTextField(
+                        modifier = Modifier.fillMaxWidth(),
                         value = email,
                         onValueChange = { email = it },
                         label = { Text(text = "Enter email") },
@@ -109,9 +107,6 @@ fun Login(navController: NavController) {
                         placeholder = { Text(text = "Bata mat kisi ko") }
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
-                    Text(text = "Forgot Password ?", modifier = Modifier.align(Alignment.End))
-
                     Spacer(modifier = Modifier.height(30.dp))
                     Button(
                         colors = ButtonDefaults.buttonColors(
@@ -119,7 +114,7 @@ fun Login(navController: NavController) {
                         ),
                         onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(text = "L o g i n")
+                        Text(text = "R E G I S T E R")
                     }
                 }
             }
@@ -133,15 +128,9 @@ fun Login(navController: NavController) {
 
         Text(
             modifier = Modifier.clickable {
-                navController.navigate(Screen.RegisterScreen.route)
+
             },
-            text = "Don't have an account ? Click here to Register !"
+            text = "Already have an account ? Click here to Login !"
         )
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun LoginPreview() {
-    Login(navController = rememberNavController())
 }

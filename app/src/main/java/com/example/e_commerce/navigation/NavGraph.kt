@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.e_commerce.view.Login
+import com.example.e_commerce.view.Register
 import com.example.e_commerce.view.SplashScreenComponent
 
 @Composable
@@ -20,7 +21,10 @@ fun NavigationGraph(
             SplashScreenComponent(navHostController)
         }
         composable(route = Screen.LoginScreen.route) {
-            Login()
+            Login(navHostController)
+        }
+        composable(route = Screen.RegisterScreen.route) {
+            Register()
         }
     }
 }
