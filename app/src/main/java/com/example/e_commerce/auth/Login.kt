@@ -110,7 +110,9 @@ fun Login(navController: NavController) {
                         colors = ButtonDefaults.buttonColors(
                             containerColor = newAppThemeColor
                         ),
-                        onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()
+                        onClick = {
+                            navController.navigate(Screen.DashboardView.route)
+                        }, modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(text = "L o g i n")
                     }

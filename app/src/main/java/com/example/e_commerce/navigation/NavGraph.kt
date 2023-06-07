@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.e_commerce.auth.Login
 import com.example.e_commerce.auth.Register
+import com.example.e_commerce.view.Dashboard
 import com.example.e_commerce.view.SplashScreenComponent
 
 @Composable
@@ -24,6 +25,9 @@ fun NavigationGraph(
         }
         composable(route = Screen.RegisterScreen.route) {
             Register()
+        }
+        composable(route = Screen.DashboardView.route) {
+            Dashboard()
         }
     }
 }
