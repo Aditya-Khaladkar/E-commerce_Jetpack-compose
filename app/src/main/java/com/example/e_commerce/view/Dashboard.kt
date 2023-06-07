@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.e_commerce.component.ChipFilter
 import com.example.e_commerce.component.ProductItem
 import com.example.e_commerce.repository.ProductRepository
 
@@ -65,7 +66,19 @@ fun Dashboard() {
         ) {
 
         }
-        Text(text = "All Products", modifier = Modifier.align(Alignment.Start).padding(10.dp))
+
+        ChipFilter(
+            chips = listOf(
+                "All Products",
+                "TV",
+                "Laptop",
+                "Smartphone",
+                "Camera",
+                "Headphones",
+                "Gaming console"
+            )
+        )
+
         LazyVerticalGrid(
             GridCells.Fixed(2), // Set the number of columns in the grid
             modifier = Modifier.fillMaxSize()

@@ -36,7 +36,6 @@ fun ProductItem(productItemModel: ProductItemModel) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)
-            .shadow(elevation = 10.dp)
     ) {
         Column(
             modifier = Modifier
