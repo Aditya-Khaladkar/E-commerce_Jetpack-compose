@@ -39,7 +39,7 @@ fun SplashScreenComponent(navController: NavController) {
                 .align(Alignment.Center)
         )
         Text(
-            text = "Create with Jetpack compose", fontSize = 20.sp, modifier = Modifier
+            text = "Created with Jetpack compose", fontSize = 20.sp, modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(20.dp)
         )

@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -17,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -33,42 +35,50 @@ fun ProductItem(productItemModel: ProductItemModel) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(8.dp)
+            .shadow(elevation = 10.dp)
     ) {
-        Row(modifier = Modifier.padding(16.dp)) {
+        Column(
+            modifier = Modifier
+                .padding(8.dp)
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.splash_screen_img_logo),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(80.dp)
+                    .fillMaxWidth()
+                    .aspectRatio(1f)
                     .clip(shape = RoundedCornerShape(4.dp))
             )
-            Column(
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = productItemModel.productTitle,
+                style = TextStyle(fontSize = 14.sp),
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
-                    .padding(start = 16.dp)
-                    .weight(1f)
+                    .fillMaxWidth()
+                    .padding(horizontal = 4.dp)
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "$ ${productItemModel.productPrice} /-",
+                style = TextStyle(
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 4.dp)
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = { /* Handle item click */ },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 4.dp)
             ) {
-                Text(
-                    text = productItemModel.productTitle,
-                    style = TextStyle(fontSize = 16.sp),
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = productItemModel.productPrice.toString(),
-                    style = TextStyle(
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Button(
-                    onClick = { /* Handle item click */ },
-                    modifier = Modifier.align(Alignment.End)
-                ) {
-                    Text(text = "Add to Cart")
-                }
+                Text(text = "Add to Cart")
             }
         }
     }
