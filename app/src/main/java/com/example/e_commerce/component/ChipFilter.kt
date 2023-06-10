@@ -35,7 +35,8 @@ fun ChipFilter(chips: List<String>) {
                     .padding(
                         start = 15.dp,
                         top = 15.dp,
-                        bottom = 15.dp
+                        bottom = 15.dp,
+                        end = 15.dp
                     )
                     .clickable {
                         selectedChipIndex = it
