@@ -22,12 +22,11 @@ Once the project is opened in Android Studio, build and run it using the provide
 
 The project demonstrates the following features and concepts of Jetpack Compose:
 
-1. Declarative UI: Jetpack Compose allows you to build UI components using a declarative approach, simplifying the UI development process and making it more intuitive.
-2. State management: Explore how to manage and update the state of the UI using Jetpack Compose's state management techniques.
-3. Composable functions: Learn how to create reusable UI components using composable functions, enabling efficient and modular UI development.
-4. Material Design integration: Utilize the Material Design system to create consistent and visually appealing interfaces.
-5. Animation and motion: Discover how to incorporate animations and motion into your UI to create delightful and engaging user experiences.
-6. Testing: Explore testing strategies and tools provided by Jetpack Compose to ensure the stability and reliability of your UI components.
+- Declarative UI: Jetpack Compose allows you to build UI components using a declarative approach, simplifying the UI development process and making it more intuitive.
+- State management: Explore how to manage and update the state of the UI using Jetpack Compose's state management techniques.
+- Composable functions: Learn how to create reusable UI components using composable functions, enabling efficient and modular UI development.-. Material Design - - integration: Utilize the Material Design system to create consistent and visually appealing interfaces.
+- Animation and motion: Discover how to incorporate animations and motion into your UI to create delightful and engaging user experiences.
+- Testing: Explore testing strategies and tools provided by Jetpack Compose to ensure the stability and reliability of your UI components.
 
 ### Project Structure
 The project follows a standard Android project structure, with the main components being:
