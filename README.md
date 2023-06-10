@@ -2,7 +2,7 @@
 
 This repository contains a project developed using Jetpack Compose, a modern toolkit for building Android user interfaces. The project aims to showcase the capabilities and features of Jetpack Compose while providing a solid foundation for creating beautiful and interactive Android applications.
 
-Getting Started
+## Getting Started
 To get started with the project, follow these steps:
 
 Clone the repository:
