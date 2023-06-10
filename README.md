@@ -32,10 +32,10 @@ The project demonstrates the following features and concepts of Jetpack Compose:
 ### Project Structure
 The project follows a standard Android project structure, with the main components being:
 
-app: Contains the main application module that hosts the Jetpack Compose UI.
-src/main/java: Contains the Kotlin code for supporting the Jetpack Compose UI and other non-Compose-related functionality.
-src/main/res: Contains the resources such as layouts, drawables, and values.
-src/test: Contains unit tests for the project.
+- app: Contains the main application module that hosts the Jetpack Compose UI.
+- src/main/java: Contains the Kotlin code for supporting the Jetpack Compose UI and other non-Compose-related functionality.
+- src/main/res: Contains the resources such as layouts, drawables, and values.
+- src/test: Contains unit tests for the project.
 
 ### Contributing
 Contributions to this project are welcome! If you would like to contribute, please follow these guidelines:
