@@ -47,9 +47,6 @@ Contributions to this project are welcome! If you would like to contribute, plea
 5. Commit your changes and push them to your fork.
 6. Submit a pull request detailing your changes and describing the problem or feature.
 
-### License
-The project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of the license.
-
 ### Acknowledgments
 This project was inspired by the amazing capabilities of Jetpack Compose and the vibrant Android developer community. We would like to express our gratitude to the entire Jetpack Compose team at Google and the contributors who have made this project possible.
 
