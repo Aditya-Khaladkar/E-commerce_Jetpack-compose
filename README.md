@@ -39,7 +39,7 @@ The project follows a standard Android project structure, with the main componen
 ### Contributing
 Contributions to this project are welcome! If you would like to contribute, please follow these guidelines:
 
-1. Fork the repository.
+- Fork the repository.
 2. Create a new branch for your feature or bug fix.
 3. Make the necessary changes and ensure that the project builds successfully.
 4. Write appropriate tests to validate your changes.
