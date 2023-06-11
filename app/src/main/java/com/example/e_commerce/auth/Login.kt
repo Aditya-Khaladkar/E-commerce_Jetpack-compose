@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.e_commerce.R
@@ -39,6 +40,8 @@ import com.example.e_commerce.ui.theme.newAppThemeColor
 
 @Composable
 fun Login(navController: NavController) {
+
+    val viewModel: LoginViewModel = viewModel()
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
